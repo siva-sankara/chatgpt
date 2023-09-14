@@ -11,7 +11,7 @@ router.post("/askQuestion", async (req, res) => {
   try {
     const {question} = req.body;
     const openai = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY,
+      apiKey: "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",
     });
     const chatCompletion = await openai.chat.completions.create({
       messages: [{ role: "user", content: question }],
